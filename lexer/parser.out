@@ -1,0 +1,52 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    DEDENT
+    DIVIDE
+    INDENT
+    MINUS
+    MULTIPLY
+    NUMBER
+    PLUS
+    STRING
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> statements
+Rule 2     statements -> statement statements
+Rule 3     statements -> <empty>
+Rule 4     statement -> expression NEWLINE
+Rule 5     expression -> assignment
+Rule 6     expression -> print_statement
+Rule 7     assignment -> ID ASSIGN expression
+Rule 8     print_statement -> PRINT LPAREN expression RPAREN
+
+Terminals, with rules where they appear
+
+DEDENT               : 
+DIVIDE               : 
+ID                   : 7
+INDENT               : 
+LPAREN               : 8
+MINUS                : 
+MULTIPLY             : 
+NEWLINE              : 4
+NUMBER               : 
+PLUS                 : 
+RPAREN               : 8
+STRING               : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+ASSIGN               : 7
+PRINT                : 8
+assignment           : 5
+expression           : 4 7 8
+print_statement      : 6
+program              : 0
+statement            : 2
+statements           : 1 2
+
